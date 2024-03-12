@@ -1,0 +1,42 @@
+ul {
+    list-style: none;
+    text-align: right;
+    padding: 0;
+}
+
+.icon {
+    float: left;
+}
+
+.icon > h2 {
+    margin: 0;
+}
+
+li {
+    font-size: 16px;
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+.button-green {
+    backgroundf-color: green;
+    color: white;
+}
+
+.Mobile {
+    display: none;
+}
+
+.icon.Mobile {
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .Mobile {
+        display: block;
+    }
+    .destkop {
+        display: none;
+    }
+}

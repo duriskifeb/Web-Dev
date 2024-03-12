@@ -1,0 +1,31 @@
+div {
+    margin:  100px 200px;
+}
+
+button {
+    background-color: green;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0px 0px 5px greenyellow;
+    transition-duration: 1s;
+    box-shadow: 0px 0px 1px greenyellow;
+}
+
+button:hover {
+    background-color: green;
+    box-shadow: 0px 10px 1px greenyellow;
+    transform: translateY(-10px);
+}
+
+button:active {
+    box-shadow: 0px 5px 1px greenyellow;
+    background-color: lemonchiffon;
+}
+
+button:focus {
+    outline: none;
+
+}

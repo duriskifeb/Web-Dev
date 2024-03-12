@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisa Kok</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 17px;
+        }
+
+        body {
+            padding: 2%;
+        }
+
+        .grid-container {
+            width: 310px;
+            height: 310px;
+            border: 5px solid #212226;
+
+            display: grid;
+
+        }
+
+        .gi-1 {
+            color: red;
+            background-color: pink;
+        }
+
+        .gi-2 {
+            color: green;
+            background-color: lime;
+        }
+
+        .gi-3 {
+            color: yellow;
+            background-color: rgb(243, 248, 165);
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-rows: repeat(8, 1fr) ;
+            grid-template-columns: repeat(8, 1fr) ;
+        }
+
+        .gi-1 {
+            grid-row-start: 1;
+            grid-row-end: 7;
+            grid-column-start: 1;
+            grid-column-end: 7;
+            width: 120px;
+            height: 120px;
+        }
+        
+        .gi-2 {
+            grid-row-start: -1;
+            grid-row-end: -3;
+            grid-column-start: -1;
+            grid-column-end: -3;
+            width: 45px;
+            height: 45px;
+        }
+        
+        .gi-3 {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item gi-1">1</div>
+        <div class="grid-item gi-2">2</div>
+        <div class="grid-item gi-3">3</div>
+        <!-- <div class="grid-item gi-4">1</div>
+        <div class="grid-item gi-5">1</div>
+        <div class="grid-item gi-6">1</div>
+        <div class="grid-item gi-7">1</div>
+        <div class="grid-item gi-8">1</div> -->
+    </div>
+</body>
+</html>
