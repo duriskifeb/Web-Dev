@@ -252,6 +252,7 @@ body {
 .products,
 .contact {
   padding: 8rem 7% 1.4rem;
+  z-index: 9999;
 }
 
 .about h2,
@@ -274,9 +275,11 @@ body {
   display: flex;
 }
 
-.about .row .about-img {
+.about-img {
   flex: 1 1 45rem;
   transform: translateX(5);
+  margin-right: 15;
+
 }
 
 /* .about .row .about-img img {
