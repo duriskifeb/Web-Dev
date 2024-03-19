@@ -74,7 +74,7 @@ button span {
     width: 200px;
 }
 .lamp {
-    width: 100%;
+    width: 92%;
 
 }
 
@@ -82,8 +82,8 @@ button span {
     position: absolute;
     top:  97%;
     transform: translateX(-50%);
-    width: 545px;
-    margin-left: -110px;
+    width: 500px;
+    margin-left: -100px;
     opacity: 0;
     transition: opacity 0.5s;
 }
