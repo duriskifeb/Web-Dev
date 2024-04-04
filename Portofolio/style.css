@@ -138,13 +138,15 @@ nav ul li a:hover::after {
     height: 3px;
     background: #ffbd59;
     position: absolute;
-    left: 0;
-    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
     transition: 0.5s;
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
+    /* Ukuran pada line bawah dari UI nya list about me */
 }
 
 .tab-contents ul li {
@@ -384,7 +386,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header {
-        background-image: url(potongOK.jpg);
+        background-image: url(Img/potongOK.jpg);
     }
     .header-text {
         margin-top: 100%;
