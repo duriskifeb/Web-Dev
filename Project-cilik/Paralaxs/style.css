@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+    /* overflow-x: hidden; */
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2em;
+    color: #359381;
+    pointer-events:  none;
+    margin-right: 270px;
+}
+.navigation a{
+    text-decoration: none;
+    color: #00342A;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.navigation a:hover {
+    background: #28bd9f;
+    color: #fff;
+
+}
+.Parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+.Parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.sec {
+    position: relative;
+    background: #00342A;
+    padding: 100px;
+}
+.sec h2 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Style for the footer */
+.footer {
+    background-color: #359381; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 20px; /* Ruang dalam di dalam footer */
+    text-align: center; /* Posisi teks di tengah */
+    position: fixed; /* Tetapkan posisi footer */
+    left: 0; /* Footer mulai dari kiri */
+    bottom: 0; /* Footer mulai dari bawah */
+    width: 100%; /* Lebar footer menyesuaikan lebar layar */
+    z-index: 999; /* Pastikan footer tampil di atas konten lain */
+}
+
+/* Style for the copyright text */
+.footer p {
+    font-size: 14px; /* Ukuran teks */
+    margin-top: 10px; /* Ruang atas teks */
+}
