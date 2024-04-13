@@ -13,6 +13,7 @@ window.addEventListener('scroll', () => {
     hil4.style.left = value * -1.5 + 'px';
 })  
 
+
 // // Mendapatkan elemen footer
 // const footer = document.getElementById('footer');
 

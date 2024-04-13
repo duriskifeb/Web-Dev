@@ -47,6 +47,7 @@ let score = 0;
 
 loadQuiz();
 
+
 function loadQuiz() {
   deselectAnswers();
 
