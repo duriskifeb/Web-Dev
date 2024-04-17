@@ -20,7 +20,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
 }
 
 /* Navbar */
@@ -236,15 +235,12 @@ body {
 /* About Section */
 .about,
 .menu,
-.products,
 .contact {
   padding: 8rem 7% 1.4rem;
-  z-index: 9999;
 }
 
 .about h2,
 .menu h2,
-.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -253,7 +249,6 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.products h2 span,
 .contact h2 span {
   color: var(--primary);
 }
@@ -262,19 +257,12 @@ body {
   display: flex;
 }
 
-.about-img {
+.about .row .about-img {
   flex: 1 1 45rem;
-  transform: translateX(5);
-  margin-right: 15;
 }
-
-/* .about .row .about-img img {
+.about .row .about-img img {
   width: 100%;
-  -webkit-mask-image: url('splash.svg');
-  -webkit-mask-size: 50%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-} */
+}
 
 .about .row .content {
   flex: 1 1 35rem;
@@ -295,12 +283,11 @@ body {
 
 /* Menu Section */
 .menu h2,
-.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
+
 .menu p,
-.products p,
 .contact p {
   text-align: center;
   max-width: 30rem;
@@ -316,9 +303,13 @@ body {
   justify-content: center;
 }
 
+.menu-card {
+  text-align: center;
+}
+
 .menu .row .menu-card {
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .menu .row .menu-card img {
@@ -608,6 +599,7 @@ footer .credit a {
     right: 2rem;
   }
 
+  /* ini untuk menurunkan foto nya */
   .about .row {
     flex-wrap: wrap;
   }
