@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0; /* Menetapkan posisi header di bagian atas layar */
+  left: 0; /* Menetapkan posisi header di sisi kiri layar */
+  height: 50px;
+  width: 100vw; /* Mengisi lebar keseluruhan layar */
+  z-index: 100;
+  padding: 0; /* Menghapus padding */
+}
+
+.nav {
+  width: 100%;
+  margin: 0;
+  background-color: bisque;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-judul {
+  flex: 1; /* Mengatur judul agar bisa memanjang ke semua sisa ruang */
+  text-align: center; /* Membuat teks judul menjadi tengah */
+}
+
+.btn {
+  margin-right: 20px; /* Memberikan jarak antara tombol dengan tepi kanan */
+}
+
+.nav-judul,
+.btn {
+  color: #fff;
+}
+
+.nav-judul {
+  font-size: 25px;
+  align-items: center;
+}
+
+.btn {
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Home */
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  background-image: url(ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Menetapkan gambar latar belakang agar tetap di posisinya */
+}
+
+.home::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* form */
+.form-container {
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+.home.show .form-container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.signup-form {
+  display: none;
+}
+.form-container.active .signup-form {
+  display: block;
+}
+.form-container.active .login-form {
+  display: none;
+}
+.form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.form-container h2 {
+  font-size: 22px;
+  color: black;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+
+.input-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  border-bottom: 1.5px solid #aaaa;
+}
+.input-box input:focus {
+  border-color: #99e40e;
+}
+.input-box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.input-box i.email,
+.input-box i.password {
+  left: 0;
+}
+.input-box input:focus ~ i.email,
+.input-box input:focus ~ i.password {
+  color: #99e40e;
+}
+.input-box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* pilihan jika opsi salah atau sebagai pengingat */
+.option-field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-container a {
+  color: #99e40e;
+  font-size: 12px;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+
+.checkbox input {
+  accent-color: #99e40e;
+}
+
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #000000;
+}
+.form-container .btn-log {
+  background: #99e40e;
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+}
+.login-signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer {
+  position: fixed; /* Menetapkan posisi footer */
+  bottom: 0; /* Menempatkannya di bagian bawah layar */
+  width: 100%; /* Mengisi lebar keseluruhan layar */
+  background-color: bisque;
+  padding: 20px 0;
+  z-index: 1000; /* Menetapkan z-index agar footer berada di atas konten lainnya */
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-item {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-item h3 {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
