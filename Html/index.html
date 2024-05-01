@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation Example</title>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    transition: transform 0.5s ease; /* Transisi untuk animasi */
+  }
+</style>
+</head>
+<body>
+
+<div class="box" id="animatedBox"></div>
+
+<script>
+  const box = document.getElementById('animatedBox');
+
+  // Fungsi untuk menggerakkan kotak ke kanan
+  function moveRight() {
+    box.style.transform = 'translateX(200px)';
+  }
+
+  // Fungsi untuk menggerakkan kotak kembali ke posisi awal
+  function resetPosition() {
+    box.style.transform = 'translateX(0)';
+  }
+
+  // Menerapkan animasi ketika halaman dimuat
+  window.onload = function() {
+    moveRight();
+  };
+
+  // Menanggapi peristiwa klik untuk mengatur animasi
+  box.addEventListener('click', function() {
+    resetPosition();
+    setTimeout(moveRight, 100); // Menambahkan jeda sebelum animasi dimulai kembali
+  });
+</script>
+
+</body>
+</html>
