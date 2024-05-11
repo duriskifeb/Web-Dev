@@ -12,6 +12,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
@@ -30,7 +31,7 @@ body {
 }
 
 .container .title::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -39,24 +40,24 @@ body {
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.container form .user-detail {
+.container form .user-details{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0 12px 0;
+  /* margin: 20px 0 12px 0; */
 }
 
-form .user-detail .input-box {
-  margin-bottom: 15px;
+form .user-details .input-box {
+  /* margin-bottom: 15px; */
   width: calc(100% / 2 - 20px);
-}
-
+}  
+/* 
 .user-detail .input-box .details {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
-}
-
+} */
+/* 
 .user-detail .input-box input {
   height: 45px;
   width: 100%;
@@ -81,4 +82,4 @@ form .gender-details .gender-title {
 
 form .gender-details .category {
   width: 80%;
-}
+} */
