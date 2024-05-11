@@ -15,13 +15,6 @@ body {
     background-color: #efefef;
 }
 
-.slide-container {
-    max-width: 1120px;
-    width: 100%;
-    background-color: grey;
-    padding: 40px 0 ;
-}
-
 .slide-content {
     margin: 0 40px;
 }
@@ -99,6 +92,7 @@ body {
     font-size: 14px;
     color: #707070;
     text-align: center;
+    margin-top: 12px;
 }
 
 .button {
