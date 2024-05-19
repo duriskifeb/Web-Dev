@@ -1,0 +1,14 @@
+{
+    "name": "Muhammad Rizky Febriyanto",
+    "age": 19,
+    "Kesukaan": "tidur kadang",
+    "hobi": "ngoding doain",
+    "email": "blala@gmail.com",
+    "listTeman": ["david, yanto, mufid"],
+    "address": {
+        "city": "Pasuruan",
+        "Country": "indonesia",
+        "nasionalis": true
+    }
+
+}
