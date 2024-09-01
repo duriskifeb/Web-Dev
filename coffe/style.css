@@ -175,7 +175,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(header-bg.jpeg);
+  background-image: url(bacground_Seblak.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -254,6 +254,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  
 }
 
 /* Animasi hover untuk .cta */
