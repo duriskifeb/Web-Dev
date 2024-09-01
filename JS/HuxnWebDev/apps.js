@@ -27,18 +27,18 @@
 // message += `his best tv show is silicion valley`
 // console.log(message);
 
-// let password = 10890;
+let password = 10890;
 
-// if (password === 9) {
-//     console.log("Welcome, Succesffully.");
-// }else if (password <= 9){
-//     console.log("look at this password");
-// }else if (password >= 9) {
-//     console.log("To long password");
-//     console.log("Password should be 9 caracters");
-// }else {
-//     console.log("Please provide a password");
-// }
+if (password === 9) {
+    console.log("Welcome, Succesffully.");
+}else if (password <= 9){
+    console.log("look at this password");
+}else if (password >= 9) {
+    console.log("To long password");
+    console.log("Password should be 9 caracters");
+}else {
+    console.log("Please provide a password");
+}
 
 // const date = ["aku", "sedang", "ngoding", "sehat"];
 // const num = [1, 2, 2, 3, 4];
@@ -115,7 +115,7 @@
 // const d = new Date(2018, 11, 24, 10, 33, 30);
 // console.log(d);
 
-const date = new Date();
+// const date = new Date();
 
 // const thn = date.getFullYear();
 // const bln = date.getMonth();
@@ -125,10 +125,10 @@ const date = new Date();
 // console.log(`Buln sekarang ${bln}`);
 // console.log(`hari sekarang ${hr}`);
 
-console.log(date.toDateString());
-console.log(date.toISOString());
-console.log(date.toLocaleString());
+// console.log(date.toDateString());
+// console.log(date.toISOString());
+// console.log(date.toLocaleString());
 
-setInterval (
-    ( => console.log(`This function interval`))
-)
+// setInterval (
+//     ( => console.log(`This function interval`))
+// )
