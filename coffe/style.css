@@ -221,7 +221,7 @@ body {
   mix-blend-mode: difference;
 }
 
-.hero .content .cta {
+/* .hero .content {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -230,7 +230,66 @@ body {
   background-color: var(--primary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+} */
+
+/* Gaya untuk link .cta */
+.cta {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  text-decoration: none; /* Menghilangkan garis bawah */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Gaya untuk tombol dengan animasi */
+.btn-animated {
+  margin-top: 1rem;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi hover untuk .cta */
+.cta:hover {
+  background-color: #ff6347; /* Contoh warna saat di-hover */
+  transform: translateY(-3px); /* Naik sedikit saat di-hover */
+}
+
+/* Animasi saat tombol ditekan (click) */
+.btn-animated:active .cta {
+  transform: translateY(0);
+  box-shadow: none; /* Hilangkan bayangan saat ditekan */
+}
+
+.btn-animated .cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.btn-animated:hover .cta::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
 
 /* About Section */
 .about,
