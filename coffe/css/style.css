@@ -212,11 +212,12 @@ body {
   color: var(--primary);
 }
 
+/* tulisan samping paragraf foto */
 .hero .content p {
   font-size: 1.6rem;
   margin-top: 2rem;
   line-height: 1.5;
-  font-weight: 100;
+  font-weight: 900;
   text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
   mix-blend-mode: difference;
 }
@@ -273,12 +274,14 @@ body {
 /* About Section */
 .about,
 .menu,
+.products,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -287,6 +290,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span 
 .contact h2 span {
   color: var(--primary);
 }
@@ -314,23 +318,25 @@ body {
 
 .about .row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 1.6;
 }
 
 /* Menu Section */
 .menu h2,
+.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
 
 .menu p,
+.products p,
 .contact p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -360,6 +366,7 @@ body {
 }
 
 /* Products Section */
+/* Products Section */
 .products .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -367,14 +374,8 @@ body {
   margin-top: 4rem;
 }
 
-.products h2 {
-  text-align: center;
-  
-}
-
-.products p {
-  text-align: center;
-  
+.products h2 span {
+  color: var(--primary);
 }
 
 .products .product-card {
