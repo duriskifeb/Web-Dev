@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Penjualan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+  <body>
+    <div class="form-container">
+      <form>
+        <!-- Informasi Pelanggan -->
+        <h2>Informasi Pelanggan</h2>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Informasi Produk -->
+        <h2>Informasi Produk</h2>
+        <label for="nama-produk">Nama Produk:</label>
+        <input type="text" id="nama-produk" name="nama-produk" required />
+
+        <label for="kode-produk">Kode Produk:</label>
+        <input type="text" id="kode-produk" name="kode-produk" required />
+
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah" name="jumlah" required />
+
+        <label for="harga">Harga Satuan:</label>
+        <input type="number" id="harga" name="harga" required />
+
+        <!-- Detail Penjualan -->
+        <h2>Detail Penjualan</h2>
+        <label for="tanggal">Tanggal Penjualan:</label>
+        <input type="date" id="tanggal" name="tanggal" required />
+
+        <label for="pembayaran">Metode Pembayaran:</label>
+        <select id="pembayaran" name="pembayaran" required>
+          <option value="tunai">Tunai</option>
+          <option value="transfer">Transfer</option>
+          <option value="kartu">Kartu Kredit</option>
+        </select>
+
+        <label for="catatan">Catatan:</label>
+        <textarea id="catatan" name="catatan" rows="3"></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </body>
+</html>

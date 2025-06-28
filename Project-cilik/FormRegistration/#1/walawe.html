@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .agreement-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.agreement-buttons .agree-button,
+.agreement-buttons .disagree-button {
+    width: 48%;
+    height: 45px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.agreement-buttons .agree-button {
+    background-color: #28a745; /* Warna hijau untuk tombol Setuju */
+}
+
+.agreement-buttons .agree-button:hover {
+    background-color: #218838;
+}
+
+.agreement-buttons .disagree-button {
+    background-color: #dc3545; /* Warna merah untuk tombol Tidak Setuju */
+}
+
+.agreement-buttons .disagree-button:hover {
+    background-color: #c82333;
+}
+
+  </style>
+  <body>
+    <!-- Button Setuju dan Tidak Setuju -->
+    <div class="agreement-buttons">
+      <button type="button" class="agree-button">Setuju</button>
+      <button type="button" class="disagree-button">Tidak Setuju</button>
+    </div>
+
+    <!-- Button Register -->
+    <div class="button">
+      <input type="submit" value="Register" />
+    </div>
+  </body>
+</html>

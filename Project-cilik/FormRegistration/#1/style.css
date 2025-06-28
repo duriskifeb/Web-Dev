@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background: green;
 }
 
 .container {
@@ -31,16 +31,16 @@ body {
 }
 
 .container .title::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 3px;
   width: 30px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background: green;
 }
 
-.container form .user-details{
+.container form .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -50,7 +50,7 @@ body {
 form .user-details .input-box {
   /* margin-bottom: 15px; */
   width: calc(100% / 2 - 20px);
-}  
+}
 /* 
 .user-detail .input-box .details {
   display: block;

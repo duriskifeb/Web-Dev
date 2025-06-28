@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Apss</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="text-white">
+    <!-- Background Elements -->
+    <div class="dora-bg"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Main App Container -->
+    <div id="app-container" class="relative w-screen h-screen flex flex-col items-center justify-center p-4 transition-opacity duration-300">
+        <!-- Timer Display -->
+        <div id="timer-display" class="flex items-center justify-center text-white">
+            <span id="minutes">05</span>
+            <span id="colon" class="mx-2 md:mx-4">:</span>
+            <span id="seconds">00</span>
+        </div>
+
+        <!-- Controls Information -->
+        <div id="controls-info" class="mt-8 text-gray-200 text-sm md:text-base">
+            <ul class="space-y-2">
+                <li class="flex items-center"><span class="key-badge">F</span> Enter Fullscreen</li>
+                <li class="flex items-center"><span class="key-badge">E</span> Edit Timer</li>
+                <li class="flex items-center"><span class="key-badge">R</span> Reset Timer</li>
+                <li class="flex items-center">
+                    <span class="key-badge">S</span> 
+                    <span id="mode-text">Countdown</span>
+                    <span id="mode-indicator" class="ml-2 text-white opacity-0 transition-opacity">✓</span>
+                </li>
+                 <li class="flex items-center"><span class="key-badge">Space</span> <span id="start-stop-text">Start Timer</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Edit Timer Modal -->
+    <div id="edit-modal" class="fixed inset-0 w-full h-full modal-bg items-center justify-center hidden z-50">
+        <div class="bg-gray-900/80 border border-gray-700 rounded-lg p-8 shadow-xl text-white w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4">Edit Timer</h2>
+            <p class="text-gray-400 mb-6">Set the initial time for the countdown.</p>
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <input type="number" id="modal-minutes" placeholder="MM" min="0" max="99" class="bg-gray-800 text-white text-center text-4xl rounded-md p-2 w-24 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="number" id="modal-seconds" placeholder="SS" min="0" max="59" class="bg-gray-800 text-white text-center text-4xl rounded-md p-2 w-24 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex justify-end space-x-4">
+                <button id="cancel-button" class="px-4 py-2 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors">Cancel</button>
+                <button id="save-button" class="px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-500 transition-colors">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Stopwatch Alarm Modal -->
+    <div id="stopwatch-alarm-modal" class="fixed inset-0 w-full h-full modal-bg items-center justify-center hidden z-50">
+        <div class="bg-gray-900/80 border border-gray-700 rounded-lg p-8 shadow-xl text-white text-center">
+            <div class="w-24 h-24 mx-auto mb-6">
+                <!-- Animated SVG Clock -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full text-yellow-400">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" class="clock-hand" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Time's Up!</h2>
+            <p class="text-gray-400 mb-6">Stopwatch paused.</p>
+            <button id="close-alarm-button" class="px-6 py-2 rounded-md bg-blue-600 hover:bg-blue-500 transition-colors">Close</button>
+        </div>
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>

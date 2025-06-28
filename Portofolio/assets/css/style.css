@@ -12,9 +12,62 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  background-color: #f8f9fa;
+}
+
+.sub-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  color: #2c7b68;
+  position: relative;
+}
+
+/* Garis di bawah sub-title */
+.sub-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Menurunkan garis sedikit agar tepat di bawah teks */
+  left: 50%; /* Menempatkan garis di tengah elemen */
+  transform: translateX(
+    -50%
+  ); /* Menggeser garis ke kiri sebanyak 50% dari lebar garis, agar rata tengah */
+  width: 25%; /* Mengatur panjang garis */
+  height: 3px;
+  background: #ffbd59;
+  border-radius: 3px;
+}
+
+/* Gaya untuk menu samping */
+.sidemenu {
+  position: fixed;
+  top: 0;
+  right: -200px; /* Memulai posisi menu di luar layar */
+  width: 200px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+}
+
+.sidemenu.open {
+  right: 0; /* Menampilkan menu */
+}
+
+.sidemenu a {
+  display: block;
+  padding: 8px;
+  color: #000;
+  text-decoration: none;
+}
+
+.sidemenu a:hover {
+  background: #f0f0f0;
+}
 
 body {
-  background: #9b9292;
+  background: #4a492c;
   color: white;
 }
 
@@ -36,6 +89,10 @@ body {
 }
 
 .container {
+  padding: 10px 10%;
+}
+
+.nav-container {
   padding: 10px 10%;
 }
 
@@ -63,8 +120,8 @@ nav ul li a {
   text-decoration: none;
   font-size: 20px;
   position: relative;
-  background-color: #96abb5; /* Warna dengan transparansi */
-  border-radius: 15px;
+  /* background-color: #96abb5; Warna dengan transparansi */
+  /* border-radius: 15px; */
   padding: 8px 16px;
   display: inline-block;
   backdrop-filter: blur(5px); /* Efek blur */
@@ -142,37 +199,42 @@ nav ul li a:hover::after {
   position: absolute;
   bottom: -5px; /* Menurunkan garis sedikit agar tepat di bawah teks */
   left: 13%; /* Menempatkan garis di tengah elemen */
-  transform: translateX(-50%); /* Menggeser garis ke kiri sebanyak 50% dari lebar garis, agar rata tengah */
+  transform: translateX(
+    -50%
+  ); /* Menggeser garis ke kiri sebanyak 50% dari lebar garis, agar rata tengah */
   width: 25%; /* Mengatur panjang garis (60% dari lebar teks) */
   height: 3px;
-  background: yellow;
+  background: #ffbd59;
   border-radius: 3px;
 }
 
 .sub-projectLine {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 50px;
   font-weight: 600;
   color: #fff;
-  position: relative; 
+  position: relative;
 }
 
 .sub-projectLine::after {
-    content: "";
+  content: "";
   position: absolute;
   bottom: -5px; /* Menurunkan garis sedikit agar tepat di bawah teks */
   left: 15%; /* Menempatkan garis di tengah elemen */
-  transform: translateX(-100%); /* Menggeser garis ke kiri sebanyak 50% dari lebar garis, agar rata tengah */
+  transform: translateX(
+    -100%
+  ); /* Menggeser garis ke kiri sebanyak 50% dari lebar garis, agar rata tengah */
   width: 15%; /* Mengatur panjang garis (60% dari lebar teks) */
   height: 3px;
   background: yellow;
   border-radius: 3px;
 }
 
-
 /* service */
 .service {
-  margin-bottom: 35px;
+  /* background-color: red; */
+  margin-top: 100px;
+  margin-bottom: 145px;
   padding: 10px 10%;
 }
 
@@ -200,7 +262,7 @@ nav ul li a:hover::after {
 
 .service-item {
   position: relative;
-  background: greenyellow;
+  background: #2c7b68;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -208,7 +270,7 @@ nav ul li a:hover::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item::before {
+/* .service-item::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -216,9 +278,10 @@ nav ul li a:hover::after {
   border-radius: inherit;
   z-index: -1;
   transition: transform 0.6s ease;
-}
+  } */
 
 .service-item:hover {
+  transition: transform 0.6s eas e;
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -249,13 +312,17 @@ nav ul li a:hover::after {
 /* aku sendiri yang ini */
 #teks-about {
   color: #fff;
-  /* margin-bottom: 10px; */
   margin-top: 20px;
+}
+
+.gifUbah {
+  margin-top: 40px;
 }
 
 .tab-titles {
   display: flex;
   margin: 20px 0 40px;
+  justify-content: center;
 }
 
 .tab-links {
@@ -264,7 +331,19 @@ nav ul li a:hover::after {
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  background-color: #2c7a68; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 25px; 
+  transition: background-color 0.3s ease; 
 }
+
+.tab-links:hover {
+  background-color: #fab957; 
+}
+
+
 
 .tab-links::after {
   content: " ";
@@ -290,7 +369,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
   color: #ffbd59;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .tab-contents {
@@ -347,7 +426,7 @@ nav ul li a:hover::after {
 /* ------------portofolio-------------- */
 
 #portofolio {
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 .Work-list {
@@ -371,7 +450,7 @@ nav ul li a:hover::after {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ffbd59);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #2c7a68);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -431,7 +510,14 @@ nav ul li a:hover::after {
   background: #ffbd59;
 }
 
----------------contact------------------------ .contact-left {
+---------------contact------------------------ 
+
+/* row-footer */
+.row-footer {
+  margin-bottom: 50px;
+}
+
+.contact-left {
   flex-basis: 35%;
 }
 
